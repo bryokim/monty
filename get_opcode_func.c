@@ -26,6 +26,7 @@ void (*get_opcode_func(char *opcode))(stack_t **, unsigned int)
 		{"pstr", &pstr},
 		{"rotl", &rotl},
 		{"rotr", &rotr},
+		{"nop", &nop},
 		{"\0", NULL},
 	};
 	while (instructions[i].f != NULL)

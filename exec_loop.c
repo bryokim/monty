@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * exec_loop - execute all instructions in the file.

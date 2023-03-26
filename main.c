@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 FILE *input = NULL;
 
@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 
 	if (stack)
 		free_stack(stack);
-	printf("Exited normally\n");
 
+	fclose(input);
 	return (0);
 }
 

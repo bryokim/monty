@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * free_stack - free stack.
@@ -17,6 +17,5 @@ void free_stack(stack_t *stack)
 		temp = stack;
 		i++;
 	}
-	printf("Freed %d\n", i);
 }
 

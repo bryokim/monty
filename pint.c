@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * pint - print integer value of the top element.

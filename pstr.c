@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * pstr - print string from character values of the elements.

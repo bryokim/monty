@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * add  - add top most  element to the second top element.
@@ -12,7 +12,7 @@ void add(stack_t **stack, unsigned int line_number)
 
 	if (!(*stack && (*stack)->next))
 	{
-		fprintf(stderr, "%s%u%s", "L", line_number, ": can't add\n");
+		fprintf(stderr, "%s%u%s", "L", line_number, ": can't add, stack too short");
 		if (*stack)
 			free(*stack);
 		exit(EXIT_FAILURE);

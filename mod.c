@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * mod - find the modulus of second top element to the top element.
@@ -12,7 +12,9 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (!(*stack && (*stack)->next))
 	{
-		fprintf(stderr, "%s%u%s", "L", line_number, ": can't mod\n");
+		char *error_msg = ": can't mod, stack too short\n";
+
+		fprintf(stderr, "%s%u%s", "L", line_number, error_msg);
 		if (*stack)
 			free(*stack);
 		exit(EXIT_FAILURE);

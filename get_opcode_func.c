@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * get_opcode_func - get function to run.

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 int check_integer(char *str);
 

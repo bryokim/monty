@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 
 /**
@@ -11,12 +11,14 @@ void pchar(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack)
 	{
-		fprintf(stderr, "%s%u%s", "L", line_number, "can't print empty\n");
+		fprintf(stderr, "%s%u%s", "L", line_number, "can't pchar, stack empty\n");
 		exit(EXIT_FAILURE);
 	}
 	if ((*stack)->n < 0 || (*stack)->n > 127)
 	{
-		fprintf(stderr, "%s%u%s", "L", line_number, "can't print\n");
+		char *error_msg = "can't pchar, value out of range\n";
+
+		fprintf(stderr, "%s%u%s", "L", line_number, error_msg);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}

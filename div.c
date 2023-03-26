@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 
 /**
@@ -13,7 +13,9 @@ void _div(stack_t **stack, unsigned int line_number)
 
 	if (!(*stack && (*stack)->next))
 	{
-		fprintf(stderr, "%s%u%s", "L", line_number, ": can't div\n");
+		char *error_msg = ": can't div, stack too short\n";
+
+		fprintf(stderr, "%s%u%s", "L", line_number, error_msg);
 		if (*stack)
 			free(*stack);
 		exit(EXIT_FAILURE);
